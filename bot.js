@@ -5,12 +5,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Ian$|^\/Katie$|^\/Swindon$|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/Kara$/;
+      botRegex = /^\/Ian$|^\/Katie$|^\/Kara$|^\/Swindon$|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$/;
 
   if(request.text && botRegex.test(request.text)) {
     console.log(request.text);
     this.res.writeHead(200);
-    postMessage();
+    postMessage(request.text);
     this.res.end();
   } else {
     console.log("don't care");
@@ -19,10 +19,12 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(ping) {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  if ping === "/All" {
+    botResponse = 'Sending Calendar Request for All';
+  }
 
   options = {
     hostname: 'api.groupme.com',
