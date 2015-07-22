@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var schedule = require('./schedule');
+var schedule = require('./schedule.js');
 var botID = process.env.BOT_ID;
 
 function respond() {
