@@ -21,10 +21,10 @@ function respond() {
 
 function queryCalendar(names, day, dayText) {
   var response = '';
-  var count = 0;
   console.log(names);
   for(var i = 0; i < names.length; i++) {
     var name = names[i];
+    var count = 0;
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
     for(var event in schedule[name][day]) {
       event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
