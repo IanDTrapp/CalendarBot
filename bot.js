@@ -19,7 +19,7 @@ function respond() {
   }
 }
 
-function queryCalendar(names, date) {
+function queryCalendar(names, day) {
   var response = '';
   var count = 0;
   console.log(names);
@@ -27,11 +27,11 @@ function queryCalendar(names, date) {
     var name = names[i];
     response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
     try {
-      for(var event in schedule[name][date.getDay()]) {
+      for(var event in schedule[name][day]) {
         if(name == null) {
           break;
         }
-        event = schedule[name][date.getDay()][event].name + " | " + schedule[name][date.getDay()][event].time + "\n" + schedule[name][date.getDay()][event].place + "\n";
+        event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
         response += event;
         count++;
       }
@@ -53,6 +53,22 @@ function postMessage(request, date) {
   var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
 
+  var day = date.getDay();
+  if(reqText.indexOf("=m") > -1) {
+    day = 1;
+  }
+  if(reqText.indexOf("=t") > -1) {
+    day = 2;
+  }
+  if(reqText.indexOf("=w") > -1) {
+    day = 3;
+  }
+  if(reqText.indexOf("=r") > -1) {
+    day = 4;
+  }
+  if(reqText.indexOf("=f") > -1) {
+    day = 5;
+  }
   reqText = reqText.toString();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("/Ian") > -1) {
     names.push("Ian");
@@ -88,7 +104,7 @@ function postMessage(request, date) {
     botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both of their calendars for today\n/Ian=m would return his calendar for Monday\n The days of the week are m t w r f";
   }
   if (reqText !== '/help') {
-    botResponse = queryCalendar(names, date);
+    botResponse = queryCalendar(names, day);
   }
 
 
