@@ -42,6 +42,7 @@ function queryCalendar(names, date) {
     if(count == 0) {
       response += who + " has no events today! Lucky bastard."
     }
+    response += "/n";
   }
   return response;
 
