@@ -19,13 +19,13 @@ function respond() {
   }
 }
 
-function queryCalendar(names, day) {
+function queryCalendar(names, day, dayText) {
   var response = '';
   var count = 0;
   console.log(names);
   for(var i = 0; i < names.length; i++) {
     var name = names[i];
-    response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
+    response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
     try {
       for(var event in schedule[name][day]) {
         if(name == null) {
@@ -54,20 +54,26 @@ function postMessage(request, date) {
   var botResponse, options, body, botReq;
 
   var day = date.getDay();
+  var dayText;
   if(reqText.indexOf("=m") > -1) {
     day = 1;
+    dayText = Monday;
   }
   if(reqText.indexOf("=t") > -1) {
     day = 2;
+    dayText = Tuesday;
   }
   if(reqText.indexOf("=w") > -1) {
     day = 3;
+    dayText = Wednesday;
   }
   if(reqText.indexOf("=r") > -1) {
     day = 4;
+    dayText = Thursday;
   }
   if(reqText.indexOf("=f") > -1) {
     day = 5;
+    dayText = Friday;
   }
   reqText = reqText.toString();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("/Ian") > -1) {
@@ -104,7 +110,7 @@ function postMessage(request, date) {
     botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both of their calendars for today\n/Ian=m would return his calendar for Monday\n The days of the week are m t w r f";
   }
   if (reqText !== '/help') {
-    botResponse = queryCalendar(names, day);
+    botResponse = queryCalendar(names, day, dayText);
   }
 
 
