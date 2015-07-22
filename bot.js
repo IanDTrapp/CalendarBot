@@ -4,7 +4,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$/;
+      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/help$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -84,7 +84,12 @@ function postMessage(request, date) {
   if (reqText.indexOf('/Nick') > -1|| reqText.indexOf('+Nick') > -1) {
     names.push("Nick");
   }
-  botResponse = queryCalendar(names, date);
+  if (reqText == '/help') {
+    botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both for today\n/Ian=m would return his calendar for Monday!\n The days of the week are m t w r f";
+  }
+  if (reqText !== '/help') {
+    botResponse = queryCalendar(names, date);
+  }
 
 
   options = {
