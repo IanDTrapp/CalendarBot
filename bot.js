@@ -35,7 +35,7 @@ function postMessage(request, date) {
   var botResponse, options, body, botReq;
 
   var reqText = request.text.trimRight();
-  reqText.substring(1);
+  reqText.slice(1);
   botResponse = queryCalendar(reqText, date);
 
   options = {
