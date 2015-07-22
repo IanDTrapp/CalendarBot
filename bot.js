@@ -84,10 +84,10 @@ function postMessage(request, date) {
   if (reqText.indexOf('/Nick') > -1|| reqText.indexOf('+Nick') > -1) {
     names.push("Nick");
   }
-  if (reqText == '/help') {
-    botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both for today\n/Ian=m would return his calendar for Monday!\n The days of the week are m t w r f";
+  if (reqText == '/calHelp') {
+    botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both of their calendars for today\n/Ian=m would return his calendar for Monday\n The days of the week are m t w r f";
   }
-  if (reqText !== '/help') {
+  if (reqText !== '/calHelp') {
     botResponse = queryCalendar(names, date);
   }
 
