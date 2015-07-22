@@ -4,7 +4,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/help$/;
+      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/help$/i;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -50,7 +50,7 @@ function queryCalendar(names, day, dayText) {
 
 function postMessage(request, date) {
   var names = [];
-  var reqText = request.text.trimRight();
+  var reqText.toLowerCase() = request.text.trimRight();
   var botResponse, options, body, botReq;
 
   var day = date.getDay();
@@ -71,61 +71,61 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
 
-  if(reqText.indexOf("=m") > -1) {
+  if(reqText.toLowerCase().indexOf("=m") > -1) {
     day = 1;
     dayText = 'Monday';
   }
-  if(reqText.indexOf("=t") > -1) {
+  if(reqText.toLowerCase().indexOf("=t") > -1) {
     day = 2;
     dayText = 'Tuesday';
   }
-  if(reqText.indexOf("=w") > -1) {
+  if(reqText.toLowerCase().indexOf("=w") > -1) {
     day = 3;
     dayText = 'Wednesday';
   }
-  if(reqText.indexOf("=r") > -1) {
+  if(reqText.toLowerCase().indexOf("=r") > -1) {
     day = 4;
     dayText = 'Thursday';
   }
-  if(reqText.indexOf("=f") > -1) {
+  if(reqText.toLowerCase().indexOf("=f") > -1) {
     day = 5;
     dayText = 'Friday';
   }
-  reqText = reqText.toString();
-  if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("/Ian") > -1) {
+  reqText.toLowerCase() = reqText.toLowerCase().toString();
+  if (reqText.toLowerCase().indexOf("/Ian") > -1 || reqText.toLowerCase().indexOf("/Ian") > -1) {
     names.push("Ian");
   }
-  if (reqText.indexOf('/Kara') > -1 || reqText.indexOf('+Kara') > -1) {
+  if (reqText.toLowerCase().indexOf('/Kara') > -1 || reqText.toLowerCase().indexOf('+Kara') > -1) {
     names.push("Kara");
   }
-  if (reqText.indexOf('/Katie') > -1 || reqText.indexOf('+Katie') > -1) {
+  if (reqText.toLowerCase().indexOf('/Katie') > -1 || reqText.toLowerCase().indexOf('+Katie') > -1) {
     names.push("Katie");
   }
-  if (reqText.indexOf('/Swindon') > -1 || reqText.indexOf('+Swindon') > -1) {
+  if (reqText.toLowerCase().indexOf('/Swindon') > -1 || reqText.toLowerCase().indexOf('+Swindon') > -1) {
     names.push("Swindon");
   }
-  if (reqText.indexOf('/Daniel') > -1|| reqText.indexOf('+Daniel') > -1) {
+  if (reqText.toLowerCase().indexOf('/Daniel') > -1|| reqText.toLowerCase().indexOf('+Daniel') > -1) {
     names.push("Daniel");
   }
-  if (reqText.indexOf('/Aaron') > -1|| reqText.indexOf('+Aaron') > -1) {
+  if (reqText.toLowerCase().indexOf('/Aaron') > -1|| reqText.toLowerCase().indexOf('+Aaron') > -1) {
     names.push("Aaron");
   }
-  if (reqText.indexOf('/Claire') > -1|| reqText.indexOf('+Claire') > -1) {
+  if (reqText.toLowerCase().indexOf('/Claire') > -1|| reqText.toLowerCase().indexOf('+Claire') > -1) {
     names.push("Claire");
   }
-  if (reqText.indexOf('/Lauren') > -1|| reqText.indexOf('+Lauren') > -1) {
+  if (reqText.toLowerCase().indexOf('/Lauren') > -1|| reqText.toLowerCase().indexOf('+Lauren') > -1) {
     names.push("Lauren");
   }
-  if (reqText.indexOf('/Sara') > -1|| reqText.indexOf('+Sara') > -1) {
+  if (reqText.toLowerCase().indexOf('/Sara') > -1|| reqText.toLowerCase().indexOf('+Sara') > -1) {
     names.push("Sara");
   }
-  if (reqText.indexOf('/Nick') > -1|| reqText.indexOf('+Nick') > -1) {
+  if (reqText.toLowerCase().indexOf('/Nick') > -1|| reqText.toLowerCase().indexOf('+Nick') > -1) {
     names.push("Nick");
   }
-  if (reqText == '/help') {
+  if (reqText.toLowerCase() == '/help') {
     botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both of their calendars for today\n/Ian=m would return his calendar for Monday\n The days of the week are m t w r f";
   }
-  if (reqText !== '/help') {
+  if (reqText.toLowerCase() !== '/help') {
     botResponse = queryCalendar(names, day, dayText);
   }
 
