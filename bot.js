@@ -27,7 +27,7 @@ function postMessage(ping) {
   if (ping === "/Ian") {
     botResponse = 'Sending Calendar Request for Ian';
   }
-  if (ping === "/kara") {
+  if (ping === "/Kara") {
     botResponse = 'Sending Calendar Request for Kara';
   }
   if (ping === "/Katie") {
