@@ -21,8 +21,10 @@ function respond() {
 
 function queryCalendar(who, date) {
   var response = "Returning calendar request for\n" + who + "\n" + date + "\n";
-  var events = JSON.stringify(schedule[who][date.getDay()]);
- console.log(events);
+  for(var event in schedule[who][date.getDay()]) {
+    console.log(event);
+    response.concat(event);
+  }
   return response;
 }
 
