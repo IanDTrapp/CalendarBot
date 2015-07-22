@@ -23,7 +23,7 @@ function queryCalendar(who, date) {
   var response = "Returning calendar request for\n" + who + "\n" + date + "\n";
   for(var event in schedule[who][date.getDay()]) {
     console.log(event);
-    response.concat(event);
+    response += event;
   }
   return response;
 }
