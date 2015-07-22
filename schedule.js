@@ -7,9 +7,9 @@ module.exports = {
 
         },
         3 : {
-            class: 'Psychology',
-            class: 'Computer Science',
-            class: 'Football'
+            class1: 'Psychology',
+            class2: 'Computer Science',
+            class3: 'Football'
         },
         4: {
 
