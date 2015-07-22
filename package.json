@@ -7,11 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "director": "",
-    "google-calendar": "*",
-    "passport": "*",
-    "passport-google-oath": "*"
-
+    "https": "*"
   },
   "engines": {
     "node": "0.10.x"
