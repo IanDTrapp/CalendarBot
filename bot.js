@@ -32,38 +32,11 @@ function queryCalendar(who, date) {
 }
 
 function postMessage(request, date) {
-  var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
-  if (reqText === "/All") {
-    botResponse = queryCalendar('All', date);
-  }
-  if (reqText === "/Ian") {
-    botResponse = queryCalendar('Ian', date);
-  }
-  if (reqText === "/Kara") {
-    botResponse = queryCalendar('Kara', date);
-  }
-  if (reqText === "/Katie") {
-    botResponse = queryCalendar('Katie', date);
-  }
-  if (reqText === "/Swindon") {
-    botResponse = queryCalendar('Swindon', date);
-  }
-  if (reqText === "/Daniel") {
-    botResponse = queryCalendar('Daniel', date);
-  }
-  if (reqText === "/Aaron") {
-    botResponse = queryCalendar('Aaron', date);
-  }
-  if (reqText === "/Claire") {
-    botResponse = queryCalendar('Claire', date);
-  }
-  if (reqText === "/Lauren") {
-    botResponse = queryCalendar('Lauren', date);
-  }
-  if (reqText === "/Sara") {
-    botResponse = queryCalendar('Sara', date);
-  }
+
+  var reqText = request.text.trimRight();
+  reqText.substring(1);
+  botResponse = queryCalendar(reqText, date);
 
   options = {
     hostname: 'api.groupme.com',
