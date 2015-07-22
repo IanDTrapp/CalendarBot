@@ -92,7 +92,7 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
   reqText = reqText.toLowerCase().toString();
-  if (reqText.toLowerCase().indexOf("/Ian") > -1 || reqText.toLowerCase().indexOf("/Ian") > -1) {
+  if (reqText.toLowerCase().indexOf("/Ian") > -1 || reqText.toLowerCase().indexOf("+Ian") > -1) {
     names.push("Ian");
   }
   if (reqText.toLowerCase().indexOf('/Kara') > -1 || reqText.toLowerCase().indexOf('+Kara') > -1) {
