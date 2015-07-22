@@ -168,11 +168,56 @@ module.exports = {
     },
 
     Claire: {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: {
+            class1: {
+                name: 'CMSD 4830',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            },
+            class2: {
+                name: 'MUSI 4750',
+                time: '6:30AM - 9:00PM',
+                place: ''
+            }
+        },
+        2: {
+            class1: {
+                name: 'CBIO 2200',
+                time: '2:00PM - 3:15PM',
+                place: ''
+            },
+            class2: {
+                name: 'CMSD 4050',
+                time: '4:00PM - 7:00PM',
+                place: ''
+            }
+        },
+        3: {
+            class1: {
+                name: 'CMSD 4830',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            }
+        },
+        4: {
+            class1: {
+                name: 'CBIO 2200',
+                time: '2:00PM - 3:15PM',
+                place: ''
+            }
+        },
+        5: {
+            class1: {
+                name: 'CMSD 5000',
+                time: '10:10AM - 11:00AM',
+                place: ''
+            },
+            class2: {
+                name: 'CBIO 2200 Lab',
+                time: '12:20PM - 3:20PM',
+                place: ''
+            }
+        }
     },
 
     Lauren: {
