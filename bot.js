@@ -71,6 +71,10 @@ function postMessage(request, date) {
   if (reqText === "/Sara") {
     botResponse = queryCalendar('Sara', date);
   }
+  if (reqText === "/Nick") {
+    botResponse = queryCalendar('Nick', date);
+  }
+
 
   options = {
     hostname: 'api.groupme.com',
