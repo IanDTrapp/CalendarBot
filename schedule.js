@@ -4,27 +4,27 @@ module.exports = {
             class1: {
                 name: 'CSCI 3030',
                 time: '8:00AM - 8:35AM',
-                place: ''
+                place: 'Boyd'
             },
             class2: {
                 name: 'CSCI 3030 Breakout',
                 time: '8:50AM - 9:55AM',
-                place: ''
+                place: 'Boyd'
             },
             class3: {
                 name: 'ENGL 3590W',
                 time: '11:15AM - 12:05PM',
-                place: ''
+                place: 'Park'
             },
             class4: {
                 name: 'GEOG 1111',
                 time: '1:25PM - 2:15PM',
-                place: ''
+                place: 'Conner Hall'
             },
             class5: {
                 name: 'CSCI 2720',
                 time: '3:35PM - 4:25PM',
-                place: ''
+                place: 'Boyd'
             }
 
         },
@@ -32,48 +32,48 @@ module.exports = {
             class1: {
                 name: 'GEOG 1111 Lab',
                 time: '11:00AM - 1:45PM',
-                place: ''
+                place: 'Geog/Geol'
             },
             class2: {
                 name: 'CSCI 2720',
                 time: '3:30PM - 4:45PM',
-                place: ''
+                place: 'Boyd'
             }
         },
         3: {
             class1: {
                 name: 'CSCI 3030',
                 time: '8:00AM - 8:35AM',
-                place: ''
+                place: 'Boyd'
             },
             class2: {
                 name: 'ENGL 3590W',
                 time: '11:15AM - 12:05PM',
-                place: ''
+                place: 'Park'
             },
             class3: {
                 name: 'GEOG 1111',
                 time: '1:25PM - 2:15PM',
-                place: ''
+                place: 'Conner Hall'
             }
         },
         4: {
             class1: {
                 name: 'CSCI 2720',
                 time: '3:30PM - 4:45PM',
-                place: ''
+                place: 'Boyd'
             }
         },
         5: {
             class1: {
                 name: 'ENGL 3590W',
                 time: '11:15AM - 12:05PM',
-                place: ''
+                place: 'Park'
             },
             class2: {
                 name: 'GEOG 1111',
                 time: '1:25PM - 2:15PM',
-                place: ''
+                place: 'Conner Hall'
             }
         }
     },
