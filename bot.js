@@ -99,7 +99,7 @@ function postMessage(ping) {
     botResponse = queryCalendar('all');
   }
   if (ping === "/Ian") {
-    botResponse = queryCalendar('ian');/
+    botResponse = queryCalendar('ian');
   }
   if (ping === "/Kara") {
     botResponse = queryCalendar('kara');
