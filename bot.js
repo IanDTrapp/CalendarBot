@@ -21,9 +21,35 @@ function respond() {
 
 function postMessage(ping) {
   var botResponse, options, body, botReq;
-
   if (ping === "/All") {
     botResponse = 'Sending Calendar Request for All';
+  }
+  if (ping === "/Ian") {
+    botResponse = 'Sending Calendar Request for Ian';
+  }
+  if (ping === "/kara") {
+    botResponse = 'Sending Calendar Request for Kara';
+  }
+  if (ping === "/Katie") {
+    botResponse = 'Sending Calendar Request for Katie';
+  }
+  if (ping === "/Swindon") {
+    botResponse = 'Sending Calendar Request for Swindon';
+  }
+  if (ping === "/Daniel") {
+    botResponse = 'Sending Calendar Request for Daniel';
+  }
+  if (ping === "/Aaron") {
+    botResponse = 'Sending Calendar Request for Aaron';
+  }
+  if (ping === "/Claire") {
+    botResponse = 'Sending Calendar Request for Claire';
+  }
+  if (ping === "/Lauren") {
+    botResponse = 'Sending Calendar Request for Lauren';
+  }
+  if (ping === "/Sara") {
+    botResponse = 'Sending Calendar Request for Sara';
   }
 
   options = {
