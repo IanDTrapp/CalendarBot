@@ -1,6 +1,27 @@
 module.exports = {
     Ian: {
-        1: {},
+        1: {
+            class1: {
+                name: 'CSCI 3030',
+                time: '8:00AM - 8:35AM',
+                location: ''
+            },
+            class2: {
+                name: 'CSCI 3030 Breakout',
+                time: '8:00AM - 8:35AM',
+                location: ''
+            },
+            class3: {
+                name: 'CSCI 3030',
+                time: '8:00AM - 8:35AM',
+                location: ''
+            },
+            class4: {
+                name: 'CSCI 3030',
+                time: '8:00AM - 8:35AM',
+                location: ''
+            },
+        },
         2: {},
         3: {
             class1: {

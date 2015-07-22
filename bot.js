@@ -20,6 +20,9 @@ function respond() {
 }
 
 function queryCalendar(who, date) {
+  if(who === "All") {
+    return "Returning calendar request for " + who + "\n" + "---------" + "\n";
+  }
   var response = "Returning calendar request for " + who + "\n" + "---------" + "\n";
   for(var event in schedule[who][date.getDay()]) {
     event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n";
