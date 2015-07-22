@@ -8,10 +8,9 @@
   },
   "dependencies": {
     "director": "",
-    "google-auth-library": "^0.9.6",
-    "googleapis": "^2.1.1",
-    "readline": "*",
-    "fs": "*"
+    "google-calendar": "*",
+    "passport": "*",
+    "passport-google-oath": "*"
 
   },
   "engines": {
