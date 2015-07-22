@@ -24,16 +24,16 @@ function queryCalendar(who, date) {
     return "Returning calendar request for " + who + "\n" + "---------" + "\n";
   }
   var response = "Returning calendar request for " + who + "\n" + "---------" + "\n";
-  for(var event in schedule[who][date.getDay()]) {
-    if(who == null || date == null ||
-        schedule[who][date.getDay()][event].place == null ||
-        schedule[who][date.getDay()][event].name == null ||
-        schedule[who][date.getDay()][event].time == null){
-      return "Uh oh, you broke me";
-      break;
+  try {
+    for(var event in schedule[who][date.getDay()]) {
+      if(who == null) {
+
+      }
+      event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n" + schedule[who][date.getDay()][event].place + "\n";
+      response += event;
     }
-    event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n" + schedule[who][date.getDay()][event].place + "\n";
-    response += event;
+  } catch (e) {
+    return "Oh shit you broke me";
   }
   return response;
 }
