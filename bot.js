@@ -20,6 +20,7 @@ function respond() {
 }
 
 function queryCalendar(who, date) {
+  var count = 0;
   if(who === "All") {
     return "Returning calendar request for " + who + "\n" + "---------" + "\n";
   }
@@ -31,9 +32,13 @@ function queryCalendar(who, date) {
       }
       event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n" + schedule[who][date.getDay()][event].place + "\n";
       response += event;
+      count++;
     }
   } catch (e) {
     return "Oh shit you broke me";
+  }
+  if(count == 0) {
+    return "No events today!"
   }
   return response;
 }
