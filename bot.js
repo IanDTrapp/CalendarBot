@@ -34,7 +34,6 @@ function queryCalendar(names, day, dayText) {
       response += event;
       count++;
     }
-    console.log(e);
     return "Oh shit you broke me";
     if(count == 0) {
       response += name + " has no events today! Lucky bastard."
@@ -123,7 +122,12 @@ function postMessage(request, date) {
     botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both of their calendars for today\n/Ian=m would return his calendar for Monday\n The days of the week are m t w r f";
   }
   if (reqText.toLowerCase() !== '/help') {
-    botResponse = queryCalendar(names, day, dayText);
+    try {
+      botResponse = queryCalendar(names, day, dayText);
+    } catch (e) {
+      botResponse = "Oh shit, you broke me!\n" + e;
+    }
+
   }
 
 
