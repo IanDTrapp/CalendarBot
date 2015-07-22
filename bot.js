@@ -22,7 +22,7 @@ function respond() {
 function queryCalendar(names, date) {
   var response = '';
   var count = 0;
-  
+
   for(var name in names) {
     response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
     try {
@@ -35,6 +35,7 @@ function queryCalendar(names, date) {
         count++;
       }
     } catch (e) {
+      console.log(e);
       return "Oh shit you broke me";
     }
     if(count == 0) {
