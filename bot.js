@@ -4,7 +4,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = (/^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/Help$/, 'i');
+      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/Help$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -26,19 +26,16 @@ function queryCalendar(names, day, dayText) {
   for(var i = 0; i < names.length; i++) {
     var name = names[i];
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
-    try {
-      for(var event in schedule[name][day]) {
-        if(name == null) {
+    for(var event in schedule[name][day]) {
+      if(name == null) {
           break;
-        }
-        event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
-        response += event;
-        count++;
       }
-    } catch (e) {
-      console.log(e);
-      return "Oh shit you broke me";
+      event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
+      response += event;
+      count++;
     }
+    console.log(e);
+    return "Oh shit you broke me";
     if(count == 0) {
       response += name + " has no events today! Lucky bastard."
     }
@@ -126,7 +123,12 @@ function postMessage(request, date) {
     botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/Ian would return Ian's calendar for today\n/Ian+Aaron would return both of their calendars for today\n/Ian=m would return his calendar for Monday\n The days of the week are m t w r f";
   }
   if (reqText.toLowerCase() !== '/help') {
-    botResponse = queryCalendar(names, day, dayText);
+    try {
+      botResponse = queryCalendar(names, day, dayText);
+    } catch (e) {
+      botResponse = "Oh shit, you broke me!\n" + e;
+    }
+
   }
 
 
