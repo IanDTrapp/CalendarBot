@@ -5,6 +5,11 @@ var fs = require('fs');
 var readline = require('readline');
 var botID = process.env.BOT_ID;
 
+var SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
+var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
+    process.env.USERPROFILE) + '/.credentials/';
+var TOKEN_PATH = TOKEN_DIR + 'calendar-api-quickstart.json';
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/Ian$|^\/Katie$|^\/Kara$|^\/Swindon$|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$/;
@@ -21,12 +26,19 @@ function respond() {
   }
 }
 
+
 function queryCalendar(who) {
+  var fs = require('fs');
+  var readline = require('readline');
+  var google = require('googleapis');
+  var googleAuth = require('google-auth-library');
+
   var SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
   var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
       process.env.USERPROFILE) + '/.credentials/';
   var TOKEN_PATH = TOKEN_DIR + 'calendar-api-quickstart.json';
 
+// Load client secrets from a local file.
   fs.readFile('client_secret.json', function processClientSecrets(err, content) {
     if (err) {
       console.log('Error loading client secret file: ' + err);
@@ -37,6 +49,13 @@ function queryCalendar(who) {
     authorize(JSON.parse(content), listEvents);
   });
 
+  /**
+   * Create an OAuth2 client with the given credentials, and then execute the
+   * given callback function.
+   *
+   * @param {Object} credentials The authorization client credentials.
+   * @param {function} callback The callback to call with the authorized client.
+   */
   function authorize(credentials, callback) {
     var clientSecret = credentials.installed.client_secret;
     var clientId = credentials.installed.client_id;
@@ -55,6 +74,14 @@ function queryCalendar(who) {
     });
   }
 
+  /**
+   * Get and store new token after prompting for user authorization, and then
+   * execute the given callback with the authorized OAuth2 client.
+   *
+   * @param {google.auth.OAuth2} oauth2Client The OAuth2 client to get token for.
+   * @param {getEventsCallback} callback The callback to call with the authorized
+   *     client.
+   */
   function getNewToken(oauth2Client, callback) {
     var authUrl = oauth2Client.generateAuthUrl({
       access_type: 'offline',
@@ -79,6 +106,11 @@ function queryCalendar(who) {
     });
   }
 
+  /**
+   * Store token to disk be used in later program executions.
+   *
+   * @param {Object} token The token to store to disk.
+   */
   function storeToken(token) {
     try {
       fs.mkdirSync(TOKEN_DIR);
@@ -91,6 +123,11 @@ function queryCalendar(who) {
     console.log('Token stored to ' + TOKEN_PATH);
   }
 
+  /**
+   * Lists the next 10 events on the user's primary calendar.
+   *
+   * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
+   */
   function listEvents(auth) {
     var calendar = google.calendar('v3');
     calendar.events.list({
@@ -107,13 +144,13 @@ function queryCalendar(who) {
       }
       var events = response.items;
       if (events.length == 0) {
-        return('No upcoming events found.');
+        console.log('No upcoming events found.');
       } else {
         console.log('Upcoming 10 events:');
         for (var i = 0; i < events.length; i++) {
           var event = events[i];
           var start = event.start.dateTime || event.start.date;
-          return('%s - %s', start, event.summary);
+          console.log('%s - %s', start, event.summary);
         }
       }
     });
