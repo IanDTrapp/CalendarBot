@@ -221,11 +221,66 @@ module.exports = {
     },
 
     Lauren: {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: {
+            class1: {
+                name: 'PSYC 3990',
+                time: '9:05AM - 9:55AM',
+                place: ''
+            },
+            class2: {
+                name: 'CMSD 4830',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            }
+        },
+        2: {
+            class1: {
+                name: 'PSYC 3990',
+                time: '9:30AM - 10:45AM',
+                place: ''
+            },
+            class2: {
+                name: 'SPAN 3020',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            },
+            class3: {
+                name: 'PSYC 4100',
+                time: '12:30PM - 1:45PM',
+                place: ''
+            }
+        },
+        3: {
+            class1: {
+                name: 'PSYC 3990',
+                time: '9:05AM - 9:55AM',
+                place: ''
+            },
+            class2: {
+                name: 'CMSD 4830',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            }
+        },
+        4: {
+            class1: {
+                name: 'SPAN 3020',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            },
+            class2: {
+                name: 'PSYC 4100',
+                time: '12:30PM - 1:45PM',
+                place: ''
+            }
+        },
+        5: {
+            class1: {
+                name: 'PSYC 3990',
+                time: '9:05AM - 9:55AM',
+                place: ''
+            }
+        }
     },
 
     Daniel: {
