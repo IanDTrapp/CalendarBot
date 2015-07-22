@@ -10,7 +10,7 @@ function respond() {
     this.res.writeHead(200);
     var date = new Date(request.created_at * 1000);
     console.log(date);
-    postMessage(request);
+    postMessage(request, date);
     this.res.end();
   } else {
     console.log("don't care");
@@ -19,41 +19,41 @@ function respond() {
   }
 }
 
-function queryCalendar(who) {
-  return "Sending calendar request for " + who;
+function queryCalendar(who, date) {
+  return "Sending calendar request for " + who + " at " + date;
 }
 
-function postMessage(request) {
+function postMessage(request, date) {
   var botResponse, options, body, botReq;
   if (request.text === "/All") {
-    botResponse = queryCalendar('all');
+    botResponse = queryCalendar('all', date);
   }
   if (request.text === "/Ian") {
-    botResponse = queryCalendar('ian');
+    botResponse = queryCalendar('ian', date);
   }
   if (request.text === "/Kara") {
-    botResponse = queryCalendar('kara');
+    botResponse = queryCalendar('kara', date);
   }
   if (request.text === "/Katie") {
-    botResponse = queryCalendar('katie');
+    botResponse = queryCalendar('katie', date);
   }
   if (request.text === "/Swindon") {
-    botResponse = queryCalendar('swindon');
+    botResponse = queryCalendar('swindon', date);
   }
   if (request.text === "/Daniel") {
-    botResponse = queryCalendar('daniel');
+    botResponse = queryCalendar('daniel', date);
   }
   if (request.text === "/Aaron") {
-    botResponse = queryCalendar('aaron');
+    botResponse = queryCalendar('aaron', date);
   }
   if (request.text === "/Claire") {
-    botResponse = queryCalendar('claire');
+    botResponse = queryCalendar('claire', date);
   }
   if (request.text === "/Lauren") {
-    botResponse = queryCalendar('lauren');
+    botResponse = queryCalendar('lauren', date);
   }
   if (request.text === "/Sara") {
-    botResponse = queryCalendar('sara');
+    botResponse = queryCalendar('sara', date);
   }
 
   options = {
