@@ -19,37 +19,41 @@ function respond() {
   }
 }
 
+function queryCalendar(who) {
+  return "Sending calendar request for " + who;
+}
+
 function postMessage(ping) {
   var botResponse, options, body, botReq;
   if (ping === "/All") {
-    botResponse = 'Sending Calendar Request for All';
+    botResponse = queryCalendar('all');
   }
   if (ping === "/Ian") {
-    botResponse = 'Sending Calendar Request for Ian';
+    botResponse = queryCalendar('ian');
   }
   if (ping === "/Kara") {
-    botResponse = 'Sending Calendar Request for Kara';
+    botResponse = queryCalendar('kara');
   }
   if (ping === "/Katie") {
-    botResponse = 'Sending Calendar Request for Katie';
+    botResponse = queryCalendar('katie');
   }
   if (ping === "/Swindon") {
-    botResponse = 'Sending Calendar Request for Swindon';
+    botResponse = queryCalendar('swindon');
   }
   if (ping === "/Daniel") {
-    botResponse = 'Sending Calendar Request for Daniel';
+    botResponse = queryCalendar('daniel');
   }
   if (ping === "/Aaron") {
-    botResponse = 'Sending Calendar Request for Aaron';
+    botResponse = queryCalendar('aaron');
   }
   if (ping === "/Claire") {
-    botResponse = 'Sending Calendar Request for Claire';
+    botResponse = queryCalendar('claire');
   }
   if (ping === "/Lauren") {
-    botResponse = 'Sending Calendar Request for Lauren';
+    botResponse = queryCalendar('lauren');
   }
   if (ping === "/Sara") {
-    botResponse = 'Sending Calendar Request for Sara';
+    botResponse = queryCalendar('sara');
   }
 
   options = {
