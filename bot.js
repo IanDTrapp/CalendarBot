@@ -9,6 +9,8 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
     console.log(request);
     this.res.writeHead(200);
+    var date = new Date(request.created_at);
+    console.log(date);
     postMessage(request);
     this.res.end();
   } else {
