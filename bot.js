@@ -55,34 +55,34 @@ function postMessage(request, date) {
     botResponse = queryCalendar('All', date);
   }
   reqText = reqText.toString();
-  if (reqText.toString().includes('/Ian') || reqText.includes('+Ian')) {
+  if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("/Ian") > -1) {
     names.push("Ian");
   }
-  if (reqText.includes('/Kara') || reqText.includes('+Kara')) {
+  if (reqText.indexOf('/Kara') > -1 || reqText.indexOf('+Kara') > -1) {
     names.push("Kara");
   }
-  if (reqText.includes('/Katie') || reqText.includes('+Katie')) {
+  if (reqText.indexOf('/Katie') > -1 || reqText.indexOf('+Katie') > -1) {
     names.push("Katie");
   }
-  if (reqText.includes('/Swindon') || reqText.includes('+Swindon')) {
+  if (reqText.indexOf('/Swindon') > -1 || reqText.indexOf('+Swindon') > -1) {
     names.push("Swindon");
   }
-  if (reqText.includes('/Daniel') || reqText.includes('+Daniel')) {
+  if (reqText.indexOf('/Daniel') > -1|| reqText.indexOf('+Daniel') > -1) {
     names.push("Daniel");
   }
-  if (reqText.includes('/Aaron') || reqText.includes('+Aaron')) {
+  if (reqText.indexOf('/Aaron') > -1|| reqText.indexOf('+Aaron') > -1) {
     names.push("Aaron");
   }
-  if (reqText.includes('/Claire') || reqText.includes('+Claire')) {
+  if (reqText.indexOf('/Claire') > -1|| reqText.indexOf('+Claire') > -1) {
     names.push("Claire");
   }
-  if (reqText.includes('/Lauren') || reqText.includes('+Lauren')) {
+  if (reqText.indexOf('/Lauren') > -1|| reqText.indexOf('+Lauren') > -1) {
     names.push("Lauren");
   }
-  if (reqText.includes('/Sara') || reqText.includes('+Sara')) {
+  if (reqText.indexOf('/Sara') > -1|| reqText.indexOf('+Sara') > -1) {
     names.push("Sara");
   }
-  if (reqText.includes('/Nick') || reqText.includes('+Nick')) {
+  if (reqText.indexOf('/Nick') > -1|| reqText.indexOf('+Nick') > -1) {
     names.push("Nick");
   }
   botResponse = queryCalendar(names, date);
