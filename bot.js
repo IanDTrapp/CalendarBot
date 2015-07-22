@@ -22,9 +22,7 @@ function respond() {
 function queryCalendar(names, date) {
   var response = '';
   var count = 0;
-  if(who === "All") {
-    return "Returning calendar request for " + who + "\n" + "---------" + "\n";
-  }
+  
   for(var name in names) {
     response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
     try {
@@ -51,9 +49,7 @@ function postMessage(request, date) {
   var names = [];
   var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
-  if (reqText === "/All") {
-    botResponse = queryCalendar('All', date);
-  }
+
   reqText = reqText.toString();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("/Ian") > -1) {
     names.push("Ian");
