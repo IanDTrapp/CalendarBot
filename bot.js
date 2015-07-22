@@ -22,36 +22,36 @@ function queryCalendar(who) {
   return "Sending calendar request for " + who;
 }
 
-function postMessage(ping) {
+function postMessage(request) {
   var botResponse, options, body, botReq;
-  if (ping === "/All") {
+  if (request.text === "/All") {
     botResponse = queryCalendar('all');
   }
-  if (ping === "/Ian") {
+  if (request.text === "/Ian") {
     botResponse = queryCalendar('ian');
   }
-  if (ping === "/Kara") {
+  if (request.text === "/Kara") {
     botResponse = queryCalendar('kara');
   }
-  if (ping === "/Katie") {
+  if (request.text === "/Katie") {
     botResponse = queryCalendar('katie');
   }
-  if (ping === "/Swindon") {
+  if (request.text === "/Swindon") {
     botResponse = queryCalendar('swindon');
   }
-  if (ping === "/Daniel") {
+  if (request.text === "/Daniel") {
     botResponse = queryCalendar('daniel');
   }
-  if (ping === "/Aaron") {
+  if (request.text === "/Aaron") {
     botResponse = queryCalendar('aaron');
   }
-  if (ping === "/Claire") {
+  if (request.text === "/Claire") {
     botResponse = queryCalendar('claire');
   }
-  if (ping === "/Lauren") {
+  if (request.text === "/Lauren") {
     botResponse = queryCalendar('lauren');
   }
-  if (ping === "/Sara") {
+  if (request.text === "/Sara") {
     botResponse = queryCalendar('sara');
   }
 
