@@ -22,7 +22,7 @@ function respond() {
 function postMessage(ping) {
   var botResponse, options, body, botReq;
 
-  if ping === "/All" {
+  if (ping === "/All") {
     botResponse = 'Sending Calendar Request for All';
   }
 
