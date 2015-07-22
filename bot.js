@@ -54,7 +54,8 @@ function postMessage(request, date) {
   if (reqText === "/All") {
     botResponse = queryCalendar('All', date);
   }
-  if (reqText.includes('/Ian') || reqText.includes('+Ian')) {
+  reqText = reqText.toString();
+  if (reqText.toString().includes('/Ian') || reqText.includes('+Ian')) {
     names.push("Ian");
   }
   if (reqText.includes('/Kara') || reqText.includes('+Kara')) {
