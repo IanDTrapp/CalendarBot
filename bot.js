@@ -50,7 +50,7 @@ function queryCalendar(names, day, dayText) {
 
 function postMessage(request, date) {
   var names = [];
-  var reqText.toLowerCase() = request.text.trimRight();
+  var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
 
   var day = date.getDay();
