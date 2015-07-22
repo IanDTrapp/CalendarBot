@@ -55,6 +55,22 @@ function postMessage(request, date) {
 
   var day = date.getDay();
   var dayText;
+  if(day == 1) {
+    dayText = 'Monday';
+  }
+  if(day == 2) {
+    dayText = 'Tuesday';
+  }
+  if(day == 3) {
+    dayText = 'Wednesday';
+  }
+  if(day == 4) {
+    dayText = 'Thursday';
+  }
+  if(day == 5) {
+    dayText = 'Friday';
+  }
+
   if(reqText.indexOf("=m") > -1) {
     day = 1;
     dayText = 'Monday';
