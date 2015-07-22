@@ -8,6 +8,7 @@ function respond() {
       botRegex = /^\/Ian$|^\/Katie$|^\/Swindon$|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/Kara$/;
 
   if(request.text && botRegex.test(request.text)) {
+    console.log(request.text);
     this.res.writeHead(200);
     postMessage();
     this.res.end();
