@@ -5,7 +5,7 @@ module.exports = {
         3: {
             class1: {
                 name: 'CSCI 3030',
-                time: '8:00AM - 8:350AM',
+                time: '8:00AM - 8:35AM',
                 location: ''
             },
             class2: {
