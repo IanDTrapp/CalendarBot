@@ -57,23 +57,23 @@ function postMessage(request, date) {
   var dayText;
   if(reqText.indexOf("=m") > -1) {
     day = 1;
-    dayText = Monday;
+    dayText = 'Monday';
   }
   if(reqText.indexOf("=t") > -1) {
     day = 2;
-    dayText = Tuesday;
+    dayText = 'Tuesday';
   }
   if(reqText.indexOf("=w") > -1) {
     day = 3;
-    dayText = Wednesday;
+    dayText = 'Wednesday';
   }
   if(reqText.indexOf("=r") > -1) {
     day = 4;
-    dayText = Thursday;
+    dayText = 'Thursday';
   }
   if(reqText.indexOf("=f") > -1) {
     day = 5;
-    dayText = Friday;
+    dayText = 'Friday';
   }
   reqText = reqText.toString();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("/Ian") > -1) {
