@@ -1,4 +1,4 @@
-module.exports = {
+var schedule = module.exports = {
     Ian: {
         1 : {
 
