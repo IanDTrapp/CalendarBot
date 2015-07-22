@@ -32,35 +32,36 @@ function queryCalendar(who, date) {
 }
 
 function postMessage(request, date) {
+  var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
-  if (request.text === "/All") {
+  if (reqText === "/All") {
     botResponse = queryCalendar('All', date);
   }
-  if (request.text === "/Ian") {
+  if (reqText === "/Ian") {
     botResponse = queryCalendar('Ian', date);
   }
-  if (request.text === "/Kara") {
+  if (reqText === "/Kara") {
     botResponse = queryCalendar('Kara', date);
   }
-  if (request.text === "/Katie") {
+  if (reqText === "/Katie") {
     botResponse = queryCalendar('Katie', date);
   }
-  if (request.text === "/Swindon") {
+  if (reqText === "/Swindon") {
     botResponse = queryCalendar('Swindon', date);
   }
-  if (request.text === "/Daniel") {
+  if (reqText === "/Daniel") {
     botResponse = queryCalendar('Daniel', date);
   }
-  if (request.text === "/Aaron") {
+  if (reqText === "/Aaron") {
     botResponse = queryCalendar('Aaron', date);
   }
-  if (request.text === "/Claire") {
+  if (reqText === "/Claire") {
     botResponse = queryCalendar('Claire', date);
   }
-  if (request.text === "/Lauren") {
+  if (reqText === "/Lauren") {
     botResponse = queryCalendar('Lauren', date);
   }
-  if (request.text === "/Sara") {
+  if (reqText === "/Sara") {
     botResponse = queryCalendar('Sara', date);
   }
 
