@@ -20,40 +20,43 @@ function respond() {
 }
 
 function queryCalendar(who, date) {
-  return "Sending calendar request for " + who + " at " + date;
+  var response = "Returning calendar request for\n" + who + "\n" + date + "\n";
+  var events = JSON.stringify(schedule[who][date.getDay()]);
+  response.concat(events);
+  return response;
 }
 
 function postMessage(request, date) {
   var botResponse, options, body, botReq;
   if (request.text === "/All") {
-    botResponse = queryCalendar('all', date);
+    botResponse = queryCalendar('All', date);
   }
   if (request.text === "/Ian") {
-    botResponse = queryCalendar('ian', date);
+    botResponse = queryCalendar('Ian', date);
   }
   if (request.text === "/Kara") {
-    botResponse = queryCalendar('kara', date);
+    botResponse = queryCalendar('Kara', date);
   }
   if (request.text === "/Katie") {
-    botResponse = queryCalendar('katie', date);
+    botResponse = queryCalendar('Katie', date);
   }
   if (request.text === "/Swindon") {
-    botResponse = queryCalendar('swindon', date);
+    botResponse = queryCalendar('Swindon', date);
   }
   if (request.text === "/Daniel") {
-    botResponse = queryCalendar('daniel', date);
+    botResponse = queryCalendar('Daniel', date);
   }
   if (request.text === "/Aaron") {
-    botResponse = queryCalendar('aaron', date);
+    botResponse = queryCalendar('Aaron', date);
   }
   if (request.text === "/Claire") {
-    botResponse = queryCalendar('claire', date);
+    botResponse = queryCalendar('Claire', date);
   }
   if (request.text === "/Lauren") {
-    botResponse = queryCalendar('lauren', date);
+    botResponse = queryCalendar('Lauren', date);
   }
   if (request.text === "/Sara") {
-    botResponse = queryCalendar('sara', date);
+    botResponse = queryCalendar('Sara', date);
   }
 
   options = {
