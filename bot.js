@@ -40,7 +40,7 @@ function queryCalendar(names, day, dayText) {
       return "Oh shit you broke me";
     }
     if(count == 0) {
-      response += who + " has no events today! Lucky bastard."
+      response += name + " has no events today! Lucky bastard."
     }
     response += "\n";
   }
