@@ -22,7 +22,7 @@ function respond() {
 function queryCalendar(names, date) {
   var response = '';
   var count = 0;
-
+  console.log(names);
   for(var name in names) {
     response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
     try {
