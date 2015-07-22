@@ -160,11 +160,67 @@ module.exports = {
     },
 
     Swindon: {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: {
+            class1: {
+                name: 'HDFS 3110',
+                time: '9:05AM - 9:55AM',
+                place: ''
+            }
+        },
+        2: {
+            class1: {
+                name: 'HDFS 3700',
+                time: '12:30PM - 1:45PM',
+                place: ''
+            },
+            class2: {
+                name: 'HDFS 4860',
+                time: '2:00PM - 3:15PM',
+                place: ''
+            },
+            class3: {
+                name: 'CBIO 2200',
+                time: '5:00PM - 6:15PM',
+                place: ''
+            }
+        },
+        3: {
+            class1: {
+                name: 'HDFS 3110',
+                time: '9:05AM - 9:55AM',
+                place: ''
+            }
+        },
+        4: {
+            class1: {
+                name: 'HDFS 3700',
+                time: '12:30PM - 1:45PM',
+                place: ''
+            },
+            class2: {
+                name: 'HDFS 4860',
+                time: '2:00PM - 3:15PM',
+                place: ''
+            },
+            class3: {
+                name: 'CBIO 2200',
+                time: '5:00PM - 6:15PM',
+                place: ''
+            }
+        },
+        5: {
+            class1: {
+                name: 'HDFS 3110',
+                time: '9:05AM - 9:55AM',
+                place: ''
+            },
+            class2: {
+                name: 'CBIO 2200 Lab',
+                time: '12:20PM - 3:20PM',
+                place: ''
+            }
+
+        }
     },
 
     Claire: {
@@ -177,6 +233,11 @@ module.exports = {
             class2: {
                 name: 'MUSI 4750',
                 time: '6:30AM - 9:00PM',
+                place: ''
+            },
+            class3: {
+                name: 'Independent Study',
+                time: '3:00PM - 5:30PM',
                 place: ''
             }
         },
@@ -197,7 +258,13 @@ module.exports = {
                 name: 'CMSD 4830',
                 time: '11:00AM - 12:15PM',
                 place: ''
-            }
+            },
+
+            class2: {
+                name: 'Independent Study',
+                time: '3:00PM - 5:30PM',
+                place: ''
+            },
         },
         4: {
             class1: {
