@@ -23,7 +23,8 @@ function queryCalendar(names, date) {
   var response = '';
   var count = 0;
   console.log(names);
-  for(var name in names) {
+  for(var i = 0; i < names.length; i++) {
+    var name = names[i];
     response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
     try {
       for(var event in schedule[name][date.getDay()]) {
