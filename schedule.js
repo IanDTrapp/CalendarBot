@@ -8,21 +8,38 @@ module.exports = {
             },
             class2: {
                 name: 'CSCI 3030 Breakout',
-                time: '8:00AM - 8:35AM',
+                time: '8:50AM - 9:55AM',
                 location: ''
             },
             class3: {
-                name: 'CSCI 3030',
-                time: '8:00AM - 8:35AM',
+                name: 'ENGL 3590W',
+                time: '11:15AM - 12:05PM',
                 location: ''
             },
             class4: {
-                name: 'CSCI 3030',
-                time: '8:00AM - 8:35AM',
+                name: 'GEOG 1111',
+                time: '1:25PM - 2:15PM',
                 location: ''
             },
+            class5: {
+                name: 'CSCI 2720',
+                time: '3:35PM - 4:25PM',
+                location: ''
+            }
+
         },
-        2: {},
+        2: {
+            class1: {
+                name: 'GEOG 1111 Lab',
+                time: '11:00AM - 1:45PM',
+                location: ''
+            },
+            class2: {
+                name: 'CSCI 2720',
+                time: '3:30PM - 4:45PM',
+                location: ''
+            }
+        },
         3: {
             class1: {
                 name: 'CSCI 3030',
@@ -38,18 +55,100 @@ module.exports = {
                 name: 'GEOG 1111',
                 time: '1:25PM - 2:15PM',
                 location: ''
-            },
+            }
         },
-        4: {},
-        5: {}
+        4: {
+            class1: {
+                name: 'CSCI 2720',
+                time: '3:30PM - 4:45PM',
+                location: ''
+            }
+        },
+        5: {
+            class1: {
+                name: 'ENGL 3590W',
+                time: '11:15AM - 12:05PM',
+                location: ''
+            },
+            class2: {
+                name: 'GEOG 1111',
+                time: '1:25PM - 2:15PM',
+                location: ''
+            }
+        }
     },
 
     Katie: {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: {
+            class1: {
+                name: 'CHEM 1211',
+                time: '12:20PM - 1:10PM',
+                location: ''
+            },
+            class2: {
+                name: 'BIOL 1108',
+                time: '2:30PM - 3:20PM',
+                location: ''
+            },
+            class3: {
+                name: 'PHYS 1111',
+                time: '4:40PM - 5:30PM',
+                location: ''
+            }
+        },
+        2: {
+            class1: {
+                name: 'BIOL 1108 Lab',
+                time: '12:30PM - 4:25PM',
+                location: ''
+            }
+        },
+        3: {
+            class1: {
+                name: 'CHEM 1211',
+                time: '12:20PM - 1:10PM',
+                location: ''
+            },
+            class2: {
+                name: 'BIOL 1108',
+                time: '2:30PM - 3:20PM',
+                location: ''
+            },
+            class3: {
+                name: 'PHYS 1111',
+                time: '4:40PM - 5:30PM',
+                location: ''
+            }
+        },
+        4: {
+            class1: {
+                name: 'CHEM 1211 Lab',
+                time: '12:30PM - 3:15PM',
+                location: ''
+            }
+        },
+        5: {
+            class1: {
+                name: 'PHYS 1111 Lab',
+                time: '10:10AM - 12:05PM',
+                location: ''
+            },
+            class2: {
+                name: 'CHEM 1211',
+                time: '12:20PM - 1:10PM',
+                location: ''
+            },
+            class3: {
+                name: 'BIOL 1108',
+                time: '2:30PM - 3:20PM',
+                location: ''
+            },
+            class4: {
+                name: 'PHYS 1111',
+                time: '4:40PM - 5:30PM',
+                location: ''
+            }
+        }
     },
 
     Aaron: {
