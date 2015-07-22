@@ -26,15 +26,19 @@ function queryCalendar(names, day, dayText) {
   for(var i = 0; i < names.length; i++) {
     var name = names[i];
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
-    for(var event in schedule[name][day]) {
-      if(name == null) {
+    try {
+      for(var event in schedule[name][day]) {
+        if(name == null) {
           break;
+        }
+        event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
+        response += event;
+        count++;
       }
-      event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
-      response += event;
-      count++;
+    } catch (e) {
+      console.log(e);
+      return "Oh shit you broke me";
     }
-    return "Oh shit you broke me";
     if(count == 0) {
       response += name + " has no events today! Lucky bastard."
     }
@@ -124,6 +128,7 @@ function postMessage(request, date) {
   if (reqText.toLowerCase() !== '/help') {
     botResponse = queryCalendar(names, day, dayText);
   }
+
 
   options = {
     hostname: 'api.groupme.com',
