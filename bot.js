@@ -36,7 +36,8 @@ function postMessage(request, date) {
 
   var reqText = request.text.trimRight();
   reqText.slice(1);
-  botResponse = queryCalendar(reqText, date);
+  console.log(reqText);
+  botResponse = queryCalendar(reqText.toString(), date);
 
   options = {
     hostname: 'api.groupme.com',
