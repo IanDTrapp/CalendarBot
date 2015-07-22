@@ -32,7 +32,7 @@ function queryCalendar(names, day, dayText) {
       count++;
     }
     if(count == 0) {
-      response += name + " has no events today! Lucky bastard."
+      response += name + " has no events today! Lucky bastard.\n"
     }
     response += "\n";
   }
