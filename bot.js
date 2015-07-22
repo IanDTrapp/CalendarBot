@@ -91,7 +91,7 @@ function postMessage(request, date) {
     day = 5;
     dayText = 'Friday';
   }
-  reqText.toLowerCase() = reqText.toLowerCase().toString();
+  reqText = reqText.toLowerCase().toString();
   if (reqText.toLowerCase().indexOf("/Ian") > -1 || reqText.toLowerCase().indexOf("/Ian") > -1) {
     names.push("Ian");
   }
