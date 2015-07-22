@@ -38,7 +38,7 @@ function queryCalendar(who, date) {
     return "Oh shit you broke me";
   }
   if(count == 0) {
-    return "No events today!"
+    return who + " has no events today! Lucky bastard."
   }
   return response;
 }
