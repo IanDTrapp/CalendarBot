@@ -24,12 +24,11 @@ function queryCalendar(names, date) {
   var count = 0;
   console.log(names);
   for(var name in names) {
-    name.toString();
     response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
     try {
       for(var event in schedule[name][date.getDay()]) {
-        if(who == null) {
-
+        if(name == null) {
+          break;
         }
         event = schedule[name][date.getDay()][event].name + " | " + schedule[name][date.getDay()][event].time + "\n" + schedule[name][date.getDay()][event].place + "\n";
         response += event;
