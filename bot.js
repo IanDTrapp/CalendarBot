@@ -19,66 +19,72 @@ function respond() {
   }
 }
 
-function queryCalendar(who, date) {
+function queryCalendar(names, date) {
+  var response = '';
   var count = 0;
   if(who === "All") {
     return "Returning calendar request for " + who + "\n" + "---------" + "\n";
   }
-  var response = "Returning calendar request for " + who + "\n" + "---------" + "\n";
-  try {
-    for(var event in schedule[who][date.getDay()]) {
-      if(who == null) {
+  for(var name in names) {
+    response += "Returning calendar request for " + name + "\n" + "---------" + "\n";
+    try {
+      for(var event in schedule[name][date.getDay()]) {
+        if(who == null) {
 
+        }
+        event = schedule[name][date.getDay()][event].name + " | " + schedule[name][date.getDay()][event].time + "\n" + schedule[name][date.getDay()][event].place + "\n";
+        response += event;
+        count++;
       }
-      event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n" + schedule[who][date.getDay()][event].place + "\n";
-      response += event;
-      count++;
+    } catch (e) {
+      return "Oh shit you broke me";
     }
-  } catch (e) {
-    return "Oh shit you broke me";
-  }
-  if(count == 0) {
-    return who + " has no events today! Lucky bastard."
+    if(count == 0) {
+      response += who + " has no events today! Lucky bastard."
+    }
   }
   return response;
+
 }
 
 function postMessage(request, date) {
+  var names = [];
   var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
   if (reqText === "/All") {
     botResponse = queryCalendar('All', date);
   }
-  if (reqText === "/Ian") {
-    botResponse = queryCalendar('Ian', date);
+  if (reqText.includes('/Ian') || reqText.includes('+Ian')) {
+    names.push("Ian");
   }
-  if (reqText === "/Kara") {
-    botResponse = queryCalendar('Kara', date);
+  if (reqText.includes('/Kara') || reqText.includes('+Kara')) {
+    names.push("Kara");
   }
-  if (reqText === "/Katie") {
-    botResponse = queryCalendar('Katie', date);
+  if (reqText.includes('/Katie') || reqText.includes('+Katie')) {
+    names.push("Katie");
   }
-  if (reqText === "/Swindon") {
-    botResponse = queryCalendar('Swindon', date);
+  if (reqText.includes('/Swindon') || reqText.includes('+Swindon')) {
+    names.push("Swindon");
   }
-  if (reqText === "/Daniel") {
-    botResponse = queryCalendar('Daniel', date);
+  if (reqText.includes('/Daniel') || reqText.includes('+Daniel')) {
+    names.push("Daniel");
   }
-  if (reqText === "/Aaron") {
-    botResponse = queryCalendar('Aaron', date);
+  if (reqText.includes('/Aaron') || reqText.includes('+Aaron')) {
+    names.push("Aaron");
   }
-  if (reqText === "/Claire") {
-    botResponse = queryCalendar('Claire', date);
+  if (reqText.includes('/Claire') || reqText.includes('+Claire')) {
+    names.push("Claire");
   }
-  if (reqText === "/Lauren") {
-    botResponse = queryCalendar('Lauren', date);
+  if (reqText.includes('/Lauren') || reqText.includes('+Lauren')) {
+    names.push("Lauren");
   }
-  if (reqText === "/Sara") {
-    botResponse = queryCalendar('Sara', date);
+  if (reqText.includes('/Sara') || reqText.includes('+Sara')) {
+    names.push("Sara");
   }
-  if (reqText === "/Nick") {
-    botResponse = queryCalendar('Nick', date);
+  if (reqText.includes('/Nick') || reqText.includes('+Nick')) {
+    names.push("Nick");
   }
+  botResponse = queryCalendar(names, date);
 
 
   options = {
