@@ -25,6 +25,13 @@ function queryCalendar(who, date) {
   }
   var response = "Returning calendar request for " + who + "\n" + "---------" + "\n";
   for(var event in schedule[who][date.getDay()]) {
+    if(who == null || date == null ||
+        schedule[who][date.getDay()][event].place == null ||
+        schedule[who][date.getDay()][event].name == null ||
+        schedule[who][date.getDay()][event].time == null){
+      return "Uh oh, you broke me";
+      break;
+    }
     event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n" + schedule[who][date.getDay()][event].place + "\n";
     response += event;
   }

@@ -83,17 +83,17 @@ module.exports = {
             class1: {
                 name: 'CHEM 1211',
                 time: '12:20PM - 1:10PM',
-                place: ''
+                place: 'Chemistry'
             },
             class2: {
                 name: 'BIOL 1108',
                 time: '2:30PM - 3:20PM',
-                place: ''
+                place: 'Biology'
             },
             class3: {
                 name: 'PHYS 1111',
                 time: '4:40PM - 5:30PM',
-                place: ''
+                place: 'Physics'
             }
         },
         2: {
@@ -107,46 +107,46 @@ module.exports = {
             class1: {
                 name: 'CHEM 1211',
                 time: '12:20PM - 1:10PM',
-                place: ''
+                place: 'Chemistry'
             },
             class2: {
                 name: 'BIOL 1108',
                 time: '2:30PM - 3:20PM',
-                place: ''
+                place: 'Biology'
             },
             class3: {
                 name: 'PHYS 1111',
                 time: '4:40PM - 5:30PM',
-                place: ''
+                place: 'Physics'
             }
         },
         4: {
             class1: {
                 name: 'CHEM 1211 Lab',
                 time: '12:30PM - 3:15PM',
-                place: ''
+                place: 'Chemistry'
             }
         },
         5: {
             class1: {
                 name: 'PHYS 1111 Lab',
                 time: '10:10AM - 12:05PM',
-                place: ''
+                place: 'Physics'
             },
             class2: {
                 name: 'CHEM 1211',
                 time: '12:20PM - 1:10PM',
-                place: ''
+                place: 'Chemistry'
             },
             class3: {
                 name: 'BIOL 1108',
                 time: '2:30PM - 3:20PM',
-                place: ''
+                place: 'Biology'
             },
             class4: {
                 name: 'PHYS 1111',
                 time: '4:40PM - 5:30PM',
-                place: ''
+                place: 'Physics'
             }
         }
     },
