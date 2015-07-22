@@ -26,6 +26,7 @@ function queryCalendar(who, date) {
   var response = "Returning calendar request for " + who + "\n" + "---------" + "\n";
   for(var event in schedule[who][date.getDay()]) {
     event = schedule[who][date.getDay()][event].name + " | " + schedule[who][date.getDay()][event].time + "\n";
+    event += "Location: " + chedule[who][date.getDay()][event].location;
     response += event;
   }
   return response;

@@ -204,90 +204,90 @@ module.exports = {
             class1: {
                 name: 'MATH 4000',
                 time: '10:10AM - 11:00AM',
-                location: ''
+                location: 'Boyd'
             },
             class2: {
                 name: 'MATH 2700',
                 time: '12:20PM - 1:10PM',
-                location: ''
+                location: 'Boyd'
             },
             class3: {
                 name: 'EMAT 3700',
                 time: '1:25PM - 3:15PM',
-                location: ''
+                location: 'Aderhold'
             },
             class4: {
                 name: 'EMAT 4800 Lab',
                 time: '3:20PM - 4:25PM',
-                location: ''
+                location: 'Aderhold'
             }
         },
         2: {
             class1: {
                 name: 'MATH 4600',
                 time: '11:00AM - 12:15PM',
-                location: ''
+                location: 'Boyd'
             },
             class2: {
                 name: 'EMAT 4800',
                 time: '2:00PM - 4:45PM',
-                location: ''
+                location: 'Aderhold'
             }
         },
         3: {
             class1: {
                 name: 'MATH 4000',
                 time: '10:10AM - 11:00AM',
-                location: ''
+                location: 'Boyd'
             },
             class2: {
                 name: 'MATH 2700',
                 time: '12:20PM - 1:10PM',
-                location: ''
+                location: 'Boyd'
             },
             class3: {
                 name: 'EMAT 3700',
                 time: '1:25PM - 3:15PM',
-                location: ''
+                location: 'Aderhold'
             },
             class4: {
                 name: 'EMAT 4800 Lab',
                 time: '3:20PM - 4:25PM',
-                location: ''
+                location: 'Aderhold'
             }
         },
         4: {
             class1: {
                 name: 'MATH 4600',
                 time: '11:00AM - 12:15PM',
-                location: ''
+                location: 'Boyd'
             },
             class2: {
                 name: 'EMAT 4800',
                 time: '2:00PM - 4:45PM',
-                location: ''
+                location: 'Aderhold'
             }
         },
         5: {
             class1: {
                 name: 'MATH 4000',
                 time: '10:10AM - 11:00AM',
-                location: ''
+                location: 'Boyd'
             },
             class2: {
                 name: 'MATH 2700',
                 time: '12:20PM - 1:10PM',
-                location: ''
+                location: 'Boyd'
             },
             class3: {
                 name: 'EMAT 3700',
                 time: '1:25PM - 3:15PM',
-                location: ''
+                location: 'Aderhold'
             },
             class4: {
                 name: 'EMAT 4800 Lab',
                 time: '3:20PM - 4:25PM',
-                location: ''
+                location: 'Aderhold'
             }
         }
     },
