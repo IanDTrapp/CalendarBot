@@ -29,10 +29,10 @@ function queryCalendar(names, day, dayText) {
     for(var event in schedule[name][day]) {
       event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
       response += event;
-      count++;
+      if(event != null) count++;
     }
     if(count == 0) {
-      response += name + " has no events today! Lucky bastard."
+      response = name + " has no events today! Lucky bastard."
     }
     response += "\n";
   }
