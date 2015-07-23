@@ -23,6 +23,7 @@ function queryCalendar(names, day, dayText) {
   var response = '';
   console.log(names);
   for(var i = 0; i < names.length; i++) {
+    var count = 0;
     var name = names[i];
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
     for(var event in schedule[name][day]) {
