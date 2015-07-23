@@ -3,8 +3,10 @@ var schedule = require('./schedule.js');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]); 
-  if(request.text) {
+  var request = JSON.parse(this.req.chunks[0]),
+      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/Help$/;
+
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     var date = new Date(request.created_at * 1000);
     console.log(date);
@@ -22,7 +24,6 @@ function queryCalendar(names, day, dayText) {
   console.log(names);
   for(var i = 0; i < names.length; i++) {
     var name = names[i];
-    var count = 0;
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
     for(var event in schedule[name][day]) {
       event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
@@ -30,7 +31,7 @@ function queryCalendar(names, day, dayText) {
       count++;
     }
     if(count == 0) {
-      response += name + " has no events today! Lucky bastard.\n"
+      response += name + " has no events today! Lucky bastard."
     }
     response += "\n";
   }
