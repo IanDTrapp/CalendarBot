@@ -3,9 +3,8 @@ var schedule = require('./schedule.js');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]);
-
-  if(request.text.charAt(0) == '/') {
+  var request = JSON.parse(this.req.chunks[0]); 
+  if(request.text) {
     this.res.writeHead(200);
     var date = new Date(request.created_at * 1000);
     console.log(date);
@@ -43,7 +42,7 @@ function postMessage(request, date) {
   var names = [];
   var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
-  reqText.toLowerCase();
+
   var day = date.getDay();
   var dayText;
   if(day == 1) {
@@ -83,34 +82,34 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
   reqText.toLowerCase();
-  if (reqText.indexOf("/ian") > -1 || reqText.indexOf("+ian") > -1) {
+  if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
     names.push("Ian");
   }
-  if (reqText.indexOf('/kara') > -1 || reqText.indexOf('+kara') > -1) {
+  if (reqText.indexOf('/Kara') > -1 || reqText.indexOf('+Kara') > -1) {
     names.push("Kara");
   }
-  if (reqText.indexOf('/katie') > -1 || reqText.indexOf('+katie') > -1) {
+  if (reqText.indexOf('/Katie') > -1 || reqText.indexOf('+Katie') > -1) {
     names.push("Katie");
   }
-  if (reqText.indexOf('/swindon') > -1 || reqText.indexOf('+swindon') > -1) {
+  if (reqText.indexOf('/Swindon') > -1 || reqText.indexOf('+Swindon') > -1) {
     names.push("Swindon");
   }
-  if (reqText.indexOf('/daniel') > -1|| reqText.indexOf('+daniel') > -1) {
+  if (reqText.indexOf('/Daniel') > -1|| reqText.indexOf('+Daniel') > -1) {
     names.push("Daniel");
   }
-  if (reqText.indexOf('/aaron') > -1|| reqText.indexOf('+aaron') > -1) {
+  if (reqText.indexOf('/Aaron') > -1|| reqText.indexOf('+Aaron') > -1) {
     names.push("Aaron");
   }
-  if (reqText.indexOf('/claire') > -1|| reqText.indexOf('+claire') > -1) {
+  if (reqText.indexOf('/Claire') > -1|| reqText.indexOf('+Claire') > -1) {
     names.push("Claire");
   }
-  if (reqText.indexOf('/lauren') > -1|| reqText.indexOf('+lauren') > -1) {
+  if (reqText.indexOf('/Lauren') > -1|| reqText.indexOf('+Lauren') > -1) {
     names.push("Lauren");
   }
-  if (reqText.indexOf('/sara') > -1|| reqText.indexOf('+sara') > -1) {
+  if (reqText.indexOf('/Sara') > -1|| reqText.indexOf('+Sara') > -1) {
     names.push("Sara");
   }
-  if (reqText.indexOf('/nick') > -1|| reqText.indexOf('+nick') > -1) {
+  if (reqText.indexOf('/Nick') > -1|| reqText.indexOf('+Nick') > -1) {
     names.push("Nick");
   }
   if (reqText.toLowerCase() == '/help') {
