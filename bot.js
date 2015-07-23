@@ -3,11 +3,9 @@ var schedule = require('./schedule.js');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/Help$/;
-  var reg = new RegExp(/^\/Ian|^\/Katie|^\/Kara|^\/Swindon|^\/Claire$|^\/Aaron$|^\/Daniel$|^\/Nick$|^\/Lauren$|^\/Sara$|^\/All$|^\/Help$/, 'i');
+  var request = JSON.parse(this.req.chunks[0]);
 
-  if(request.text && reg.test(request.text)) {
+  if(request.text.charAt(0) == '/') {
     this.res.writeHead(200);
     var date = new Date(request.created_at * 1000);
     console.log(date);
@@ -45,7 +43,7 @@ function postMessage(request, date) {
   var names = [];
   var reqText = request.text.trimRight();
   var botResponse, options, body, botReq;
-
+  reqText.toLowerCase();
   var day = date.getDay();
   var dayText;
   if(day == 1) {
@@ -85,34 +83,34 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
   reqText.toLowerCase();
-  if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
+  if (reqText.indexOf("/ian") > -1 || reqText.indexOf("+ian") > -1) {
     names.push("Ian");
   }
-  if (reqText.indexOf('/Kara') > -1 || reqText.indexOf('+Kara') > -1) {
+  if (reqText.indexOf('/kara') > -1 || reqText.indexOf('+kara') > -1) {
     names.push("Kara");
   }
-  if (reqText.indexOf('/Katie') > -1 || reqText.indexOf('+Katie') > -1) {
+  if (reqText.indexOf('/katie') > -1 || reqText.indexOf('+katie') > -1) {
     names.push("Katie");
   }
-  if (reqText.indexOf('/Swindon') > -1 || reqText.indexOf('+Swindon') > -1) {
+  if (reqText.indexOf('/swindon') > -1 || reqText.indexOf('+swindon') > -1) {
     names.push("Swindon");
   }
-  if (reqText.indexOf('/Daniel') > -1|| reqText.indexOf('+Daniel') > -1) {
+  if (reqText.indexOf('/daniel') > -1|| reqText.indexOf('+daniel') > -1) {
     names.push("Daniel");
   }
-  if (reqText.indexOf('/Aaron') > -1|| reqText.indexOf('+Aaron') > -1) {
+  if (reqText.indexOf('/aaron') > -1|| reqText.indexOf('+aaron') > -1) {
     names.push("Aaron");
   }
-  if (reqText.indexOf('/Claire') > -1|| reqText.indexOf('+Claire') > -1) {
+  if (reqText.indexOf('/claire') > -1|| reqText.indexOf('+claire') > -1) {
     names.push("Claire");
   }
-  if (reqText.indexOf('/Lauren') > -1|| reqText.indexOf('+Lauren') > -1) {
+  if (reqText.indexOf('/lauren') > -1|| reqText.indexOf('+lauren') > -1) {
     names.push("Lauren");
   }
-  if (reqText.indexOf('/Sara') > -1|| reqText.indexOf('+Sara') > -1) {
+  if (reqText.indexOf('/sara') > -1|| reqText.indexOf('+sara') > -1) {
     names.push("Sara");
   }
-  if (reqText.indexOf('/Nick') > -1|| reqText.indexOf('+Nick') > -1) {
+  if (reqText.indexOf('/nick') > -1|| reqText.indexOf('+nick') > -1) {
     names.push("Nick");
   }
   if (reqText.toLowerCase() == '/help') {
