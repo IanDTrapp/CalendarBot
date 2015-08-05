@@ -27,7 +27,7 @@ function queryCalendar(names, day, dayText) {
     var name = names[i];
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
     for(var event in schedule[name][day]) {
-      event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
+      event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n\n";
       response += event;
       count++;
     }
