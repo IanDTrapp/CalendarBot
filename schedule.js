@@ -359,11 +359,71 @@ module.exports = {
     },
 
     Nick: {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: {
+            class1: {
+                name: 'RUSS 1001',
+                time: '12:20PM - 1:10PM',
+                place: ''
+            },
+            class2: {
+                name: 'ECON 2200',
+                time: '1:25PM - 2:15PM',
+                place: ''
+            }
+        },
+        2: {
+            class1: {
+                name: 'COMM 1100',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            },
+            class2: {
+                name: 'RUSS 1001',
+                time: '12:30PM - 1:45PM',
+                place: ''
+            },
+            class3: {
+                name: 'ACCT 2101',
+                time: '2:00PM - 3:15PM',
+                place: 'Physics'
+            }
+        },
+        3: {
+            class1: {
+                name: 'RUSS 1001',
+                time: '12:20PM - 1:10PM',
+                place: ''
+            },
+            class2: {
+                name: 'ECON 2200',
+                time: '1:25PM - 2:15PM',
+                place: ''
+            }
+        },
+        4: {
+            class1: {
+                name: 'COMM 1100',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            },
+            class2: {
+                name: 'RUSS 1001',
+                time: '12:30PM - 1:45PM',
+                place: ''
+            },
+            class3: {
+                name: 'ACCT 2101',
+                time: '2:00PM - 3:15PM',
+                place: 'Physics'
+            }
+        },
+        5: {
+            class1: {
+                name: 'ECON 2200',
+                time: '1:25PM - 2:15PM',
+                place: ''
+            }
+        }
     },
 
     Kara: {
