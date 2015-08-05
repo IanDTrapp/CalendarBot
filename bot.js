@@ -27,7 +27,7 @@ function queryCalendar(names, day, dayText) {
     var name = names[i];
     response += name + "'s " + dayText + " schedule\n" + "---------" + "\n";
     for(var event in schedule[name][day]) {
-      event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n\n";
+      event = schedule[name][day][event].name + " | " + schedule[name][day][event].time + "\n" + schedule[name][day][event].place + "\n";
       response += event;
       count++;
     }
@@ -70,6 +70,14 @@ function postMessage(request, date) {
     day = 5;
     dayText = 'Friday';
   }
+  if(reqText.toLowerCase().indexOf("=sa") > -1) {
+    day = 6;
+    dayText = 'Saturday';
+  }
+  if(reqText.toLowerCase().indexOf("=su") > -1) {
+    day = 7;
+    dayText = 'Sunday';
+  }
 
   reqText.toLowerCase();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
@@ -108,8 +116,8 @@ function postMessage(request, date) {
   if (reqText.toLowerCase() !== '/help') {
     botResponse = queryCalendar(names, day, dayText);
   }
-  if(reqText.toLowerCase().indexOf("=su") > -1 || reqText.toLowerCase().indexOf("=sa") > -1) {
-    botResponse = '>We don\'t have class on the weekend!';
+  if(day == 6 || day == 7) {
+    botResponse = 'We don\'t have any classes on the weekend!';
   }
 
   options = {
