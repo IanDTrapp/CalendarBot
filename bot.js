@@ -70,6 +70,11 @@ function postMessage(request, date) {
     day = 5;
     dayText = 'Friday';
   }
+  if(reqText.toLowerCase().indexOf("=sa") > -1 || reqText.toLowerCase().indexOf("=su") > -1) {
+    day = 6;
+    dayText = 'Weekend';
+  }
+
   reqText.toLowerCase();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
     names.push("Ian");
