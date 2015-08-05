@@ -460,10 +460,85 @@ module.exports = {
     },
 
     Sara: {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: {
+            class1: {
+                name: 'MARK 3000',
+                time: '10:10AM - 11:00AM',
+                place: ''
+            },
+            class2: {
+                name: 'RMIN 4000',
+                time: '11:15AM - 12:05PM',
+                place: ''
+            },
+            class3: {
+                name: 'FINA 3000',
+                time: '12:20PM - 1:10PM',
+                place: ''
+            },
+            class4: {
+                name: 'BUSN 4000',
+                time: '1:25PM - 2:15PM',
+                place: ''
+            }
+        },
+        2: {
+            class1: {
+                name: 'SPAN 3020',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            }
+        },
+        3: {
+            class1: {
+                name: 'MARK 3000',
+                time: '10:10AM - 11:00AM',
+                place: ''
+            },
+            class2: {
+                name: 'RMIN 4000',
+                time: '11:15AM - 12:05PM',
+                place: ''
+            },
+            class3: {
+                name: 'FINA 3000',
+                time: '12:20PM - 1:10PM',
+                place: ''
+            },
+            class4: {
+                name: 'BUSN 4000',
+                time: '1:25PM - 2:15PM',
+                place: ''
+            }
+        },
+        4: {
+            class1: {
+                name: 'SPAN 3020',
+                time: '11:00AM - 12:15PM',
+                place: ''
+            }
+        },
+        5: {
+            class1: {
+                name: 'MARK 3000',
+                time: '10:10AM - 11:00AM',
+                place: ''
+            },
+            class2: {
+                name: 'RMIN 4000',
+                time: '11:15AM - 12:05PM',
+                place: ''
+            },
+            class3: {
+                name: 'FINA 3000',
+                time: '12:20PM - 1:10PM',
+                place: ''
+            },
+            class4: {
+                name: 'BUSN 4000',
+                time: '1:25PM - 2:15PM',
+                place: ''
+            }
+        }
     }
 };
