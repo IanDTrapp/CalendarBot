@@ -70,10 +70,15 @@ function postMessage(request, date) {
     day = 5;
     dayText = 'Friday';
   }
-  if(reqText.toLowerCase().indexOf("=sa") > -1 || reqText.toLowerCase().indexOf("=su") > -1) {
+  if(reqText.toLowerCase().indexOf("=sa") > -1) {
     day = 6;
-    dayText = 'Weekend';
+    dayText = 'Saturday';
   }
+  if(reqText.toLowerCase().indexOf("=su") > -1) {
+    day = 7;
+    dayText = 'Sunday';
+  }
+
 
   reqText.toLowerCase();
   if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
