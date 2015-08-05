@@ -264,7 +264,7 @@ module.exports = {
                 name: 'Independent Study',
                 time: '3:00PM - 5:30PM',
                 place: ''
-            },
+            }
         },
         4: {
             class1: {

@@ -71,9 +71,7 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
 
-  if(reqText.toLowerCase().indexOf("=su") > -1 || reqText.toLowerCase().indexOf("=sa") > -1) {
-    botResponse = '>We don\'t have class on the weekend!';
-  } else {
+
     reqText.toLowerCase();
     if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
       names.push("Ian");
