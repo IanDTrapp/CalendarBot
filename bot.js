@@ -116,7 +116,7 @@ function postMessage(request, date) {
   if (reqText.toLowerCase() !== '/help') {
     botResponse = queryCalendar(names, day, dayText);
   }
-  if(day == 6 || day == 7) {
+  if(dayText === 'Saturday' || dayText === 'Sunday') {
     botResponse = 'We don\'t have any classes on the weekend!';
   }
 
