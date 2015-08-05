@@ -71,44 +71,45 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
 
-
-    reqText.toLowerCase();
-    if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
-      names.push("Ian");
-    }
-    if (reqText.indexOf('/Kara') > -1 || reqText.indexOf('+Kara') > -1) {
-      names.push("Kara");
-    }
-    if (reqText.indexOf('/Katie') > -1 || reqText.indexOf('+Katie') > -1) {
-      names.push("Katie");
-    }
-    if (reqText.indexOf('/Swindon') > -1 || reqText.indexOf('+Swindon') > -1) {
-      names.push("Swindon");
-    }
-    if (reqText.indexOf('/Daniel') > -1 || reqText.indexOf('+Daniel') > -1) {
-      names.push("Daniel");
-    }
-    if (reqText.indexOf('/Aaron') > -1 || reqText.indexOf('+Aaron') > -1) {
-      names.push("Aaron");
-    }
-    if (reqText.indexOf('/Claire') > -1 || reqText.indexOf('+Claire') > -1) {
-      names.push("Claire");
-    }
-    if (reqText.indexOf('/Lauren') > -1 || reqText.indexOf('+Lauren') > -1) {
-      names.push("Lauren");
-    }
-    if (reqText.indexOf('/Sara') > -1 || reqText.indexOf('+Sara') > -1) {
-      names.push("Sara");
-    }
-    if (reqText.indexOf('/Nick') > -1 || reqText.indexOf('+Nick') > -1) {
-      names.push("Nick");
-    }
-    if (reqText.toLowerCase() == '/help') {
-      botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/[name] would return [name]'s calendar for today\n/[name]+[name] would return both of their calendars for today\n/[name]=[day] would return [name]'s calendar for that day\n The days of the week are m t w r f";
-    }
-    if (reqText.toLowerCase() !== '/help') {
-      botResponse = queryCalendar(names, day, dayText);
-    }
+  reqText.toLowerCase();
+  if (reqText.indexOf("/Ian") > -1 || reqText.indexOf("+Ian") > -1) {
+    names.push("Ian");
+  }
+  if (reqText.indexOf('/Kara') > -1 || reqText.indexOf('+Kara') > -1) {
+    names.push("Kara");
+  }
+  if (reqText.indexOf('/Katie') > -1 || reqText.indexOf('+Katie') > -1) {
+    names.push("Katie");
+  }
+  if (reqText.indexOf('/Swindon') > -1 || reqText.indexOf('+Swindon') > -1) {
+    names.push("Swindon");
+  }
+  if (reqText.indexOf('/Daniel') > -1 || reqText.indexOf('+Daniel') > -1) {
+    names.push("Daniel");
+  }
+  if (reqText.indexOf('/Aaron') > -1 || reqText.indexOf('+Aaron') > -1) {
+    names.push("Aaron");
+  }
+  if (reqText.indexOf('/Claire') > -1 || reqText.indexOf('+Claire') > -1) {
+    names.push("Claire");
+  }
+  if (reqText.indexOf('/Lauren') > -1 || reqText.indexOf('+Lauren') > -1) {
+    names.push("Lauren");
+  }
+  if (reqText.indexOf('/Sara') > -1 || reqText.indexOf('+Sara') > -1) {
+    names.push("Sara");
+  }
+  if (reqText.indexOf('/Nick') > -1 || reqText.indexOf('+Nick') > -1) {
+    names.push("Nick");
+  }
+  if (reqText.toLowerCase() == '/help') {
+    botResponse = "Hi! I'm easy to use. \nHere are some examples of what you can do:\n/[name] would return [name]'s calendar for today\n/[name]+[name] would return both of their calendars for today\n/[name]=[day] would return [name]'s calendar for that day\n The days of the week are m t w r f";
+  }
+  if (reqText.toLowerCase() !== '/help') {
+    botResponse = queryCalendar(names, day, dayText);
+  }
+  if(reqText.toLowerCase().indexOf("=su") > -1 || reqText.toLowerCase().indexOf("=sa") > -1) {
+    botResponse = '>We don\'t have class on the weekend!';
   }
 
   options = {
