@@ -71,12 +71,10 @@ function postMessage(request, date) {
     dayText = 'Friday';
   }
   if(reqText.toLowerCase().indexOf("=sa") > -1) {
-    day = 6;
-    dayText = 'Saturday';
+    botResponse = 'We don\'t have class on the weekend!';
   }
   if(reqText.toLowerCase().indexOf("=su") > -1) {
-    day = 7;
-    dayText = 'Sunday';
+    botResponse = 'We don\'t have class on the weekend!';
   }
 
 
